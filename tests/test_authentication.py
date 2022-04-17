@@ -3,7 +3,7 @@ import os
 from vcr import VCR
 import pytest
 from click.testing import CliRunner
-import pyicloud_ipd
+import pyicloud as pyicloud_ipd
 from icloudpd.base import main
 from icloudpd.authentication import authenticate, TwoStepAuthRequiredError
 import inspect

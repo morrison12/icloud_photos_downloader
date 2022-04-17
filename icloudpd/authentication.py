@@ -2,7 +2,7 @@
 
 import sys
 import click
-import pyicloud_ipd
+import pyicloud as pyicloud_ipd
 from icloudpd.logger import setup_logger
 
 

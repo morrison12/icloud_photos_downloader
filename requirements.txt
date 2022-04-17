@@ -1,4 +1,4 @@
-pyicloud_ipd==0.10.1
+pyicloud @ git+https://github.com/morrison12/pyicloud.git#egg=pyicloud-ipd #@0.9.8
 schema==0.7.4
 click==6.7
 python_dateutil==2.8.2

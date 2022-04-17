@@ -10,9 +10,9 @@ from mock import call, ANY
 from click.testing import CliRunner
 import piexif
 from piexif._exceptions import InvalidImageDataError
-from pyicloud_ipd.services.photos import PhotoAsset, PhotoAlbum, PhotosService
-from pyicloud_ipd.base import PyiCloudService
-from pyicloud_ipd.exceptions import PyiCloudAPIResponseError
+from pyicloud.services.photos import PhotoAsset, PhotoAlbum, PhotosService
+from pyicloud.base import PyiCloudService
+from pyicloud.exceptions import PyiCloudAPIResponseError
 from requests.exceptions import ConnectionError
 from icloudpd.base import main
 from tests.helpers.print_result_exception import print_result_exception
@@ -382,7 +382,7 @@ class DownloadPhotoTestCase(TestCase):
                     )
 
                     for f in files_to_skip:
-                        expected_message = f"INFO     {os.path.join(base_dir, os.path.normpath(f[0]))} already exists." 
+                        expected_message = f"INFO     {os.path.join(base_dir, os.path.normpath(f[0]))} already exists."
                         self.assertIn(expected_message, self._caplog.text)
 
                     self.assertIn(
@@ -390,7 +390,7 @@ class DownloadPhotoTestCase(TestCase):
                         self._caplog.text,
                     )
                     self.assertNotIn(
-                        f"INFO     {os.path.join(base_dir, os.path.normpath('2018/07/30/IMG_7399-medium.MOV'))} already exists.", 
+                        f"INFO     {os.path.join(base_dir, os.path.normpath('2018/07/30/IMG_7399-medium.MOV'))} already exists.",
                         self._caplog.text
                     )
 
